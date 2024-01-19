@@ -1,5 +1,6 @@
 'use client'
 
+
 import React from 'react';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
@@ -12,7 +13,7 @@ const HomePage = () => {
     <>
     <section className='max-container flex justify-center'>
     <div>This is HomePage
-    <Button className={isActive?'bg-blue-500':'bg-red-500'}>
+    <Button className={`${isActive?'bg-theme':'bg-blue-500'} `}>
         <Link href='/' >Home Link</Link>
     </Button>
     </div>
