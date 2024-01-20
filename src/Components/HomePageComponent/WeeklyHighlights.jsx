@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
 import WH_Left from "../../assets/wh_left.svg";
 import WH_Right from "../../assets/wh_right.svg";
 import WH_Center from "../../assets/wh_center.svg";
 import { Button, Typography } from "@mui/material";
-import { DisplayTheme } from "../../Context/context";
+// import { DisplayTheme } from "../../Context/context";
 import { Link } from "react-router-dom";
 import WH1 from "../../assets/WH1.png";
 import WH2 from "../../assets/WH2.png";

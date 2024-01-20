@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,4 +12,89 @@
 
 .max-container {
   @apply mx-auto max-w-[1440px];
+}
+
+
+body {
+  scrollbar-gutter: stable both-edges;
+  scrollbar-color: transparent;
+}
+
+#Type_select > * {
+  background-color: rgb(10, 30, 85);
+  padding-block: 16px;
+  color: white;
+}
+
+#selectMarker > #selectTooltip {
+  font-size: 204px !important;
+}
+
+.map-tooltip > * {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  z-index: 1000;
+}
+
+.map-tooltip a {
+  pointer-events: auto;
+  color: #193967 !important;
+}
+
+.map-tooltip::before {
+  content: "";
+  border: none !important;
+}
+
+.test {
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+.home-hero {
+  background-image: url("../assets/HOME.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box {
+  background-color: #193967;
+  position: relative;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+.box:hover {
+  transform: perspective(700px) rotateX(10deg);
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #193967;
+  border-radius: 10px;
+  transform-origin: top center;
+  transform: perspective(200px) rotateX(0deg);
+  transition: all 0.5s ease;
+}
+.box:hover::before {
+  transform: perspective(200px) rotateX(0deg);
+}
+
+
+  .home-hero {
+    background-image: url("../assets/HOME.jpg");
+
+  }
+
+
+.leaflet-tooltip.map-label {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #333; /* Text color */
 }

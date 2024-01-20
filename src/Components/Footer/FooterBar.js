@@ -1,8 +1,9 @@
 'use client'
 
-// import React, { useContext, useState } from "react";
+import React from 'react'
 import { useState } from "react";
-import { Typography } from "@mui/material";
+
+import { Typography } from '@mui/material';
 // import { DisplayTheme } from "../Context/context";
 import NLT from "@/assets/NLTA-DarkIcon.png";
 import Image from "next/image";
@@ -14,17 +15,15 @@ import {
   Telegram,
   Twitter,
 } from "@mui/icons-material";
-// import { useSubscribeNewsLetterMutation } from "@/features/api/apiSlice";
 
-const Footer = () => {
-  // const theme = useContext(DisplayTheme);
-  // const { darkMode } = theme;
-  // darkMode ? "#03070E" :
-  const backgroundImage = {
-    backgroundColor:  "#193967",
-    backgroundSize: "cover",
-  };
+const backgroundImage = {
+  backgroundColor:  "#193967",
+  backgroundSize: "cover",
+};
 
+
+
+const FooterBar = () => {
   const {
     register,
     formState: { errors },
@@ -36,31 +35,24 @@ const Footer = () => {
     email: "",
   });
 
-  // const [subscribeNewsletter] = useSubscribeNewsLetterMutation();
-
-  // const onSubmit = async () => {
-  //   await subscribeNewsletter(subscriber);
-  //   setSubscriber({
-  //     name: "",
-  //     email: "",
-  //   });
-  // };
-
   const scrollToTop = () =>
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+
 
   return (
-    <div style={backgroundImage} className=" md:bg-cover z-0  bg-auto max-container h-[388px]">
-      <div
-        className={` flex justify-between items-center px-6 `}
-      >
-      {/* Left Section */}
-        <div className="h-full sm:w-1/2 md:w-1/3 flex flex-col justify-end gap-4 py-5 sm:py-8 text-white">
-          <div className="text-2xl sm:text-[32px] sm:text-start text-center font-medium mb-2">
+    <footer style={backgroundImage} className='max-container h-96 bg-blue-500 p-6'>
+        {/* flex container */}
+        <div className='  flex flex-row justify-between item-center w-full h-full px-6 '>
+          
+          {/* Left Section */}
+          {/* Left Container */}
+          <div className='w-auto flex flex-col justify-end items-start  text-white text-3xl '>
+          {/* Left Content */}
+          <div className="text-2xl sm:text-3xl sm:text-start text-center font-medium mb-2">
             <Typography variant="p">
               <a href="mailto:info.nyanlynnthit@gmail.com">Contact Us</a>
             </Typography>
@@ -74,7 +66,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-4">
-            <div className="text-2xl  sm:text-[32px] sm:text-start text-center font-medium">
+            <div className="text-3xl sm:text-start text-center font-medium">
               <Typography variant="p">
                 Subscribe to Newsletter, Updates & Events
               </Typography>
@@ -132,19 +124,20 @@ const Footer = () => {
               </div>
             </form>
           </div>
-        </div>
+          </div>
 
-        {/* Right Section */}
-        <div className="w-auto flex flex-col-reverse sm:flex-col justify-center items-center">
+          {/* Right Section           */}
+                    {/* Right Section */}
+        <div className="w-auto flex flex-col justify-center items-center">
           <div className="pt-6 w-1/2 h-40 ">
             <Image src={NLT} width={150} height={150} alt="Logo" />
           </div>
-          <div className="flex sm:hidden md:flex justify-between space-x-5 pt-6 sm:pb-6 text-2xl  w-full sm:w-fit text-white">
+          <div className="flex gap-5 sm:hidden md:flex justify-between  pt-6 sm:pb-6 text-2xl  w-full sm:w-fit text-white">
             <a
               href="https://www.facebook.com/nyanlynnthitanalytica/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl"
+              className="text-2xl "
             >
               <FacebookOutlined sx={{ fontSize: 40 }} />
             </a>
@@ -179,9 +172,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default Footer;
+
+
+        </div>
+
+    </footer>
+  )
+}
+
+export default FooterBar

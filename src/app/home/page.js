@@ -1,25 +1,23 @@
-'use client'
 
 
-import React from 'react';
-import { Button } from 'flowbite-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React from "react";
+
+
+import HeroSection from "@/Components/HomePageComponent/HeroSection";
 
 const HomePage = () => {
-    const pathname = usePathname();
-    const isActive = pathname.startsWith('/')
+  
   return (
     <>
-    <section className='max-container flex justify-center'>
-    <div>This is HomePage
-    <Button className={`${isActive?'bg-theme':'bg-blue-500'} `}>
-        <Link href='/' >Home Link</Link>
-    </Button>
-    </div>
-    </section>
-    </>
-  )
-}
+      <section className="bg-theme max-container h-auto  flex justify-center">
+        <div className=" w-full h-full">
+         
 
-export default HomePage
+          <HeroSection />
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default HomePage;

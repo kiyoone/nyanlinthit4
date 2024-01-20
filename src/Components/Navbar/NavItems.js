@@ -43,6 +43,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/assets/nltLogo.png';
+import Headroom from 'react-headroom';
 import { usePathname } from 'next/navigation';
 
 import { Dropdown } from 'flowbite-react';
@@ -51,7 +52,8 @@ const NavItems = () => {
   const pathname = usePathname();
   
   return (
-    <nav className=' max-container h-[80px] border-b-2 flex justify-between items-center px-6'>
+    <Headroom style={{zIndex:100,backgroundColor:'white'}}>
+    <nav className='max-container h-[80px] border-b-2 flex justify-between items-center px-6'>
       <Link href='/'>
         <Image src={Logo} alt='Logo' width={80} height={80} />
       </Link>
@@ -111,6 +113,7 @@ const NavItems = () => {
       </Link>
 
     </nav>
+    </Headroom>
   )
 }
 

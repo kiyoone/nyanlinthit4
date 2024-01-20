@@ -1,11 +1,14 @@
 import { Roboto_Serif } from 'next/font/google'
 import './globals.css'
 import NavItems from '@/Components/Navbar/NavItems'
+import FooterBar from '@/Components/Footer/FooterBar'
 
 
 
 
-const robotoSerif = Roboto_Serif({ subsets: ['latin'] })
+
+const robotoSerif = Roboto_Serif({ subsets: ['latin'],
+display: 'swap', })
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,6 +23,7 @@ export default function RootLayout({ children }) {
         <main>
         {children}
         </main>
+        <FooterBar />
         </body>
     </html>
   )
